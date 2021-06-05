@@ -37,11 +37,11 @@ class DokterController extends Controller {
     {
         Dokter::create([
             'id' => $request->id,
-            'nama' => $request->nama,
-            'jabatan' => $request->jabatan,
-
+            'nama'=> $request->nama,
+            'jabatan'=> $request->jabatan,
         ]);
-
+        
+        return redirect ('dokter0186');
         
     }
 
@@ -64,7 +64,8 @@ class DokterController extends Controller {
      */
     public function edit($id)
     {
-        //
+        $dokter = Dokter::find($id);
+        return view ('dokter_edit0186', ['dokter0186'=> $dokter]);
     }
 
     /**
@@ -76,7 +77,13 @@ class DokterController extends Controller {
      */
     public function update(Request $request, $id)
     {
-        //
+        $dokter = Dokter::find($id);
+        $dokter->id = $request->id;
+        $dokter->nama = $request->nama;
+        $dokter->jabatan = $request->jabatan;
+        $dokter->save();
+
+        return redirect('dokter0186');
     }
 
     /**
@@ -87,6 +94,6 @@ class DokterController extends Controller {
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

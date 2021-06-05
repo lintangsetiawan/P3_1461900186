@@ -47,9 +47,9 @@
             <td>{{$dokter->nama}}</td>
             <td>{{$dokter->jabatan}}</td>
             <td>
-                <a href="#!">Hapus</a>
+                <a href="!#">Hapus</a>
                 |
-                <a href="#!">Edit</a>
+                <a class="dokter_edit" href="{{ url('dokter0186/'. $dokter->id) }}">Edit</href=>
             </td>
         </tr>
 

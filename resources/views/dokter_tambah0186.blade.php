@@ -2,7 +2,7 @@
     @csrf
     ID: <input type="text" name="id">
     NAMA: <input type="text" name="nama">
-    JABATAN: <input type="text" nama="jabatan">
+    JABATAN: <input type="text" name="jabatan">
     <button type="submit">simpan</button>
-    
+
 </form>
